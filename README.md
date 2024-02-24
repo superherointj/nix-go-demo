@@ -3,6 +3,8 @@
 # To build package
 nix build
 
+Then, run: ./result/bin/nix-go-demo
+
 # To run application
 nix run
 
@@ -14,3 +16,11 @@ nix develop
 Dir-Env can automatically load shell when openning directory.
 
 > `direnv allow`
+
+
+# To generate container
+
+cat ./result | docker load
+
+docker run --rm nix-go-demo-container:wvihq3vm6d0ahf1zaj4dh4sgv6w7pa2q
+
